@@ -8,17 +8,18 @@ body {
 justify-content: center;
 align-items: center;
 background-color: blueviolet;
-animation: girar 2s;
+border-radius: 50%;
+animation: girar 2s infinite, brillar 2s infinite;
 }
 
 .loader {
     width: 100px;
     height: 100px;
-    background:
-}
+    background:;
 
 @keyframes girar {
-    0% {}
+    0% {transform: rotatey(0deg) rotatez(0deg);
+    }
 
     50% {}
 
@@ -26,3 +27,15 @@ animation: girar 2s;
         transform: rotatey(360deg) rotatez(360deg);
     }
 }
+
+@keyframes brillar {
+    0%{box-shadow: 10px 33px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 33px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 33px 5px 0px rgba(0,0,0,0.75);}
+    100%{box-shadow: 10px 33px 5px 36px rgba(0,0,0,0.58);
+-webkit-box-shadow: 10px 33px 5px 36px rgba(0,0,0,0.58);
+-moz-box-shadow: 10px 33px 5px 36px rgba(0,0,0,0.58);}
+}
+}
+
+.loader { background: conic-gradient;}
